@@ -1,0 +1,12 @@
+table>thead>tr {
+    background-color: rgb(252, 251, 251);
+    color: rgb(20, 14, 14);
+}
+
+table>tbody>tr:nth-child(even) {
+    background-color: rgb(181, 219, 235);
+}
+
+table>tbody>tr:nth-child(odd) {
+    background-color: rgb(74, 148, 187);
+}

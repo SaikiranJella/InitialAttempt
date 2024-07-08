@@ -1,0 +1,51 @@
+<style>
+    #board {
+        border: 2px solid red;
+        height: 500px;
+        width: 800px;
+        display: inline-block;
+        position: relative;
+    }
+    body >div :nth-child(2){
+        border: 2px solid blue;
+        width: 150px; 
+        position: absolute;
+        display:inline-block;
+        top: 250px; 
+        left: 8px;  
+    }
+    body >div :nth-child(3){
+        border: 2px solid green;
+        height: 300px;  
+        position: absolute;
+        display:inline-block;
+        top:100px;  
+        left: 700px; 
+    }
+</style>
+<div>
+    <div id="board"></div>
+    <div></div>
+    <div></div>
+    <div>
+        <input type="button" value="Shoot" onclick="fnShoot()">
+    </div>
+</div>
+
+<script>
+    function fnShoot(){
+        var arrowRef= document.querySelector("body >div :nth-child(2)")
+        var i=0;
+        let intervalId=
+        setInterval(
+            function(){
+                i=i+1;
+                arrowRef.style.left=i+"px";
+                if (i == 550) {
+                    clearInterval(intervalId)
+                }
+            },1
+        )
+        
+    } 
+</script>

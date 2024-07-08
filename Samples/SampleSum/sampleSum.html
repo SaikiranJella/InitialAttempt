@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum</title>
+</head>
+<body>
+    <h1>
+        Find Sum
+    </h1>
+    <p>
+        <label>No1:</label>
+        <input id="No1" type="text">
+    </p>
+    <p>
+        <label>No2:</label>
+        <input id="No2" type="text">
+    </p>
+    <button onclick="findSum()">Add</button>
+    <h2>Result: <span></span></h2>
+    <script>
+        function findSum() {
+            let no1Ref= document.querySelector("#No1")
+            let no2Ref= document.querySelector("#No2")
+            let number1= no1Ref.value 
+            let number2= no2Ref.value 
+            let sum = parseInt(number1)+parseInt(number2)
+            no1Ref.value=""
+            no2Ref.value=""
+            let resultRef= document.querySelector("body > h2 > span")
+            result= resultRef.innerText=sum
+            let resultcolor= "red"
+            if(sum>100){
+                resultcolor= "green"
+            }
+            resultRef.style.color=resultcolor;
+        }
+    </script>
+</body>
+</html>

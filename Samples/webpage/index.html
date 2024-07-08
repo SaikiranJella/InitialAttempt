@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="heading">My First Static webpage</div>
+    <div class="menu">
+        <a class="active" onclick=fn1()>Home</a>
+        <a onclick=fn2()>About</a>
+        <a onclick=fn3()>Contact</a>
+    </div>
+
+    <div name="content"></div>
+    <div class="footer">&copy; rights belongs to me. </div>
+
+    <script>
+        function reset(item){
+            let activeEle = document.querySelector(".active")
+            activeEle.classList.remove("active")
+        }
+        function fn1(){
+            reset("home")
+            let homeRef = document.querySelector("body > div.menu > a:nth-child(1)")
+            homeRef.classList.add("active")
+            console.log(homeRef)
+        }
+        function fn2(){
+            reset("about")
+            let aboutRef= document.querySelector("body > div.menu > a:nth-child(2)")
+            aboutRef.classList.add("active")
+        }
+        function fn3(){
+            reset("contact")
+            let contactRef= document.querySelector("body > div.menu > a:nth-child(3)")
+            contactRef.classList.add("active")
+        }
+
+    </script>
+</body>
+
+</html>

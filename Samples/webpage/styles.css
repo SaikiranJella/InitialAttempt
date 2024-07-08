@@ -1,0 +1,58 @@
+body {
+    margin: 0px;
+}
+
+#heading {
+    text-align: center;
+    background: yellow;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 10px 0px;
+}
+
+.footer {
+    background: yellow;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#heading+div {
+    text-align: right;
+    background: #dbd1e4;
+    line-height: 40px;
+    position: sticky;
+    top: 0
+}
+
+#heading+div>a {
+    font-size: 20px;
+    letter-spacing: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+[name="content"] {
+    background: #b1abab;
+    height: 1500px;
+}
+
+
+.active {
+    color: black;
+    font-size: 25px !important;
+    font-weight: bold;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    background: #d9d2e0;
+    line-height: 40px;
+}

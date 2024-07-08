@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <style>
+          body {
+            margin: 0px;
+        }
+
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: right;
+            background: #d9d2e0;
+            line-height: 40px;
+        }
+
+        .menu>li {
+            display: inline;
+            margin-right: 20px;
+            font-size: 20px;
+            letter-spacing: 5px;
+            font-style: italic;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .active {
+            color: red;
+            font-size: 25px !important
+        }
+      </style>
+   </head>
+   <body>
+    <ul class="menu">
+        <li class="active" onclick="f1()">Home</li>
+        <li onclick="f2()">About</li>
+        <li onclick="f3()">Contact</li>
+    </ul>
+    <script>
+        function reset(item) {
+              console.log(item)
+              const activeEle = document.querySelector(".active")
+              activeEle.classList.remove("active")
+          }
+
+          function f1() {
+              reset("home");
+              const homeRef = document.querySelector('.menu>li:nth-child(1)');
+              homeRef.classList.add("active")
+          }
+          function f2() {
+              reset("about");
+              const aboutRef = document.querySelector('.menu>li:nth-child(2)');
+              aboutRef.classList.add("active")
+          }
+          function f3() {
+              reset("contact");
+              const contactRef = document.querySelector('.menu>li:nth-child(3)');
+              contactRef.classList.add("active")
+          }
+      </script>
+   </body>
+</html>
